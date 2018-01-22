@@ -3,7 +3,8 @@ package pusz.name.smsgateway.domain;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
-import pusz.name.smsgateway.domain.converter.*;
+
+import pusz.name.smsgateway.utils.LocalDateTimeConverter;
 
 @Entity(name = "sms_requests")
 public class SmsRequest {

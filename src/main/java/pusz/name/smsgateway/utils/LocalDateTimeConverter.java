@@ -1,4 +1,4 @@
-package pusz.name.smsgateway.domain.converter;
+package pusz.name.smsgateway.utils;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;

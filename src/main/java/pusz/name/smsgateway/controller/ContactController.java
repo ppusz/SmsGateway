@@ -10,9 +10,11 @@ import pusz.name.smsgateway.service.DbService;
 import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+import static org.springframework.http.MediaType.sortByQualityValue;
 
 @RestController
 @RequestMapping("api/contact")
+@CrossOrigin(origins = "*")
 public class ContactController {
 
     @Autowired
@@ -22,6 +24,7 @@ public class ContactController {
 
     @GetMapping(value = "getAll")
     public List<ContactDto> getContacts() {
+        System.out.println("Contacts requested");
         return mapper.mapToContactDtoList(dbService.getAllContacts());
     }
 

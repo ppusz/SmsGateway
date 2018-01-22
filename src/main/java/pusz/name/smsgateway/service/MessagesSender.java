@@ -24,13 +24,13 @@ public class MessagesSender {
     private void sendSmsMessages() {
         List<SmsRequest> smsRequestsNotSent = dbService.getSmsRequestsNotSent();
         for(SmsRequest smsRequest : smsRequestsNotSent) {
-            String smsSenderId = sender.send(smsRequest.getPhoneNumber(), smsRequest.getMessage());
-            if(smsSenderId != null) {
-                smsRequest.setSenderId(smsSenderId);
-                smsRequest.setSentDate(LocalDateTime.now());
-                dbService.saveSmsRequest(smsRequest);
-                logger.debug("Sms sent: " + smsSenderId);
-            }
+//            String smsSenderId = sender.send(smsRequest.getPhoneNumber(), smsRequest.getMessage());
+//            if(smsSenderId != null) {
+//                smsRequest.setSenderId(smsSenderId);
+//                smsRequest.setSentDate(LocalDateTime.now());
+//                dbService.saveSmsRequest(smsRequest);
+//                logger.debug("Sms sent: " + smsSenderId);
+//            }
         }
     }
 

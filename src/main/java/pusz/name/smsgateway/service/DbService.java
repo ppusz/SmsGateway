@@ -72,7 +72,7 @@ public class DbService {
         return contactRepository.save(contact);
     }
 
-    public void deleteContact(final Long id) {
-        contactRepository.deleteById(id);
+    public void deleteContact(Long id) {
+        contactRepository.delete(id);
     }
 }
